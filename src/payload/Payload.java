@@ -33,7 +33,11 @@ public class Payload
         
         for(int i=1;i<=nop;)
         {
-            System.out.print("Please Enter the Class for passenger " + i +"\n==>");
+            System.out.println("Please Enter the Class for passenger " + i);
+            System.out.println("'E' for Ecomony Class,");
+            System.out.println("'F' for First Class,");
+            System.out.println("'B' for Business Class");
+            System.out.print("==>");
             //NOTE--> next() make String and charAt(0) take the first letter from the word. 
             passclass = input.next().charAt(0);
             
@@ -54,7 +58,7 @@ public class Payload
                         if(bagweight>30)
                         {
                             exprice= (bagweight-30)*10;
-                            System.out.println("Extra price is "+exprice);
+                            System.out.println("Extra price is "+exprice+"$");
                         }
                         else 
                         {
@@ -87,10 +91,11 @@ public class Payload
                     case 'E':
                     case 'e':
                     {
-                        System.out.print("enter the number\n"
-                                         + "1)Premium\n"
-                                         + "2)NOT Premium\n"
-                                         + "==>"              );
+                        System.out.print("Enter the kind of Economy Class:\n"
+                                + "'1' for Premium Economy Class\n"
+                                + "'2' for Ordinary Economy Class\n"
+                                + "==>");
+                       
                         economy= input.nextInt();
                         switch(economy)
                         {
@@ -124,6 +129,7 @@ public class Payload
                     }//end case e
                     break;   
                 }//end switch passclass    
+                System.out.println("==============================================\n");
             i++;        
             }//end if
             else
